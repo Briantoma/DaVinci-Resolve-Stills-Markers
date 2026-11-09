@@ -2333,7 +2333,7 @@ def create_window(marker_count_by_color, markers, still_album_name, timeline_set
                                                 "Events": {"Toggled": True},
                                             }
                                         ),
-                                        ui.HGap(60),
+                                        ui.HGap(),
                                         ui.CheckBox(
                                             {
                                                 "Weight": 0,
@@ -2348,15 +2348,15 @@ def create_window(marker_count_by_color, markers, still_album_name, timeline_set
                                                 "Weight": 0,
                                                 "ID": sub_folder_name_line_editID,
                                                 "Text": settings["sub_folder_name"],
-                                                "MinimumSize": [100, 0],
-                                                "MaximumSize": [120, 16777215],
+                                                "MinimumSize": [90, 0],
+                                                "MaximumSize": [90, 16777215],
                                             }
                                         ),
                                         ui.CheckBox(
                                             {
                                                 "Weight": 0,
                                                 "ID": sub_folder_timeline_check_boxID,
-                                                "Text": "+ _timeline name",
+                                                "Text": "+ _timeline",
                                                 "Checked": settings["sub_folder_append_timeline_name"],
                                                 "Events": {"Toggled": True},
                                             }
