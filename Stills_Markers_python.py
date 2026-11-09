@@ -2320,53 +2320,62 @@ def create_window(marker_count_by_color, markers, still_album_name, timeline_set
                                         ),
                                     ],
                                 ),
-                                # Create folder options
+                                # Create folder options: sub folder column so "Append" lines up under "Create sub folder"
                                 ui.HGroup(
                                     {"Weight": 0, "Spacing": 10},
                                     [
-                                        ui.CheckBox(
-                                            {
-                                                "Weight": 0,
-                                                "ID": create_timeline_folder_check_boxID,
-                                                "Text": "Create Folder with timeline name",
-                                                "Checked": settings["create_export_folder_timeline_name"],
-                                                "Events": {"Toggled": True},
-                                            }
+                                        ui.VGroup(
+                                            {"Weight": 0},
+                                            [
+                                                ui.CheckBox(
+                                                    {
+                                                        "Weight": 0,
+                                                        "ID": create_timeline_folder_check_boxID,
+                                                        "Text": "Create Folder with timeline name",
+                                                        "Checked": settings["create_export_folder_timeline_name"],
+                                                        "Events": {"Toggled": True},
+                                                    }
+                                                ),
+                                                ui.VGap(),
+                                            ],
                                         ),
                                         ui.HGap(60),
-                                        ui.CheckBox(
-                                            {
-                                                "Weight": 0,
-                                                "ID": create_sub_folder_check_boxID,
-                                                "Text": "Create sub folder:",
-                                                "Checked": settings["create_sub_folder"],
-                                                "Events": {"Toggled": True},
-                                            }
-                                        ),
-                                        ui.LineEdit(
-                                            {
-                                                "Weight": 0,
-                                                "ID": sub_folder_name_line_editID,
-                                                "Text": settings["sub_folder_name"],
-                                                "MinimumSize": [100, 0],
-                                                "MaximumSize": [120, 16777215],
-                                            }
-                                        ),
-                                    ],
-                                ),
-                                # Sub folder: append timeline name (own row, the folder row is full)
-                                ui.HGroup(
-                                    {"Weight": 0, "Spacing": 10},
-                                    [
-                                        ui.HGap(),
-                                        ui.CheckBox(
-                                            {
-                                                "Weight": 0,
-                                                "ID": sub_folder_timeline_check_boxID,
-                                                "Text": "Append _timeline name to sub folder",
-                                                "Checked": settings["sub_folder_append_timeline_name"],
-                                                "Events": {"Toggled": True},
-                                            }
+                                        ui.VGroup(
+                                            {"Weight": 0, "Spacing": 4},
+                                            [
+                                                ui.HGroup(
+                                                    {"Weight": 0, "Spacing": 10},
+                                                    [
+                                                        ui.CheckBox(
+                                                            {
+                                                                "Weight": 0,
+                                                                "ID": create_sub_folder_check_boxID,
+                                                                "Text": "Create sub folder:",
+                                                                "Checked": settings["create_sub_folder"],
+                                                                "Events": {"Toggled": True},
+                                                            }
+                                                        ),
+                                                        ui.LineEdit(
+                                                            {
+                                                                "Weight": 0,
+                                                                "ID": sub_folder_name_line_editID,
+                                                                "Text": settings["sub_folder_name"],
+                                                                "MinimumSize": [100, 0],
+                                                                "MaximumSize": [120, 16777215],
+                                                            }
+                                                        ),
+                                                    ],
+                                                ),
+                                                ui.CheckBox(
+                                                    {
+                                                        "Weight": 0,
+                                                        "ID": sub_folder_timeline_check_boxID,
+                                                        "Text": "Append _timeline name to sub folder",
+                                                        "Checked": settings["sub_folder_append_timeline_name"],
+                                                        "Events": {"Toggled": True},
+                                                    }
+                                                ),
+                                            ],
                                         ),
                                     ],
                                 ),
