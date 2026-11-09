@@ -2085,11 +2085,11 @@ def create_window(marker_count_by_color, markers, still_album_name, timeline_set
             "WindowTitle": win_name,
             "WindowFlags": window_flags,
             "WindowModality": "ApplicationModal",
-            "FixedSize": [638, 510],
+            "FixedSize": [638, 535],
             "Events": {"Close": True, "KeyPress": True},
         },
         ui.VGroup(
-            {"MinimumSize": [638, 510], "MaximumSize": [638, 510], "Weight": 1},
+            {"MinimumSize": [638, 535], "MaximumSize": [638, 535], "Weight": 1},
             [
                 ui.HGroup({"Weight": 1, "Spacing": 0}, [
                     ui.HGap(14),

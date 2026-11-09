@@ -44,7 +44,7 @@ Stills_Marker_python_settings/
 | 3120–3284 | **Boucle principale** : grab, metadata, export, crop, burnin, resize, tag sRGB, rename |
 | 3284–3593 | Post-boucle : rename markers, move markers, EDL, JSON, DRX cleanup, Finder, ImageOptim |
 
-## UI — layout actuel (638 × 510 px)
+## UI — layout actuel (638 × 535 px)
 
 ```
 [MarkerSource combo] [Color label] [Color combo] [Restrict to In/Out]
@@ -59,6 +59,7 @@ Stills_Marker_python_settings/
   └─ ExportSettings (enabled si export=True) :
        [path LineEdit] [Browse]
        [Create Folder with timeline name] [Create sub folder:] [input]
+                                           [Append _timeline name to sub folder]
        [Replace stills] [Resize stills in %] [input] [%] [Remove DRX files] [Tag sRGB (Rec.709 match)]
        [Fit to FHD canvas] [Burnins] [compress combo]
 [Open destination folder]
